@@ -3,7 +3,12 @@
         {
             "name": "Win32",
             "includePath": [
+<<<<<<< HEAD
                 "${workspaceFolder}/**"
+=======
+                "${workspaceFolder}/**",
+                "D:/OOP_PROJECT/dependencies/SFML/include"
+>>>>>>> c812219 (Cleaned up binaries and fixed repository connection)
             ],
             "defines": [
                 "_DEBUG",
