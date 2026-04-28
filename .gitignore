@@ -1,0 +1,29 @@
+# --- Executables and Libraries ---
+# These are compiler-specific and should not be shared
+*.exe
+*.dll
+*.so
+*.dylib
+
+# --- Build Artifacts ---
+# Temporary files created during compilation
+*.o
+*.obj
+*.out
+*.gch
+*.pdb
+
+# --- SFML / Project Specifics ---
+# If you have a specific build folder, ignore it
+build/
+bin/
+obj/
+
+# --- IDE Settings ---
+# Since you and your teammates have different compilers, 
+# sharing .vscode settings will likely break their build.
+.vscode/
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
