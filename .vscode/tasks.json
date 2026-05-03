@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"version": "2.0.0",
 	"tasks": [
@@ -29,4 +30,40 @@
 			"detail": "compiler: C:\\msys64\\ucrt64\\bin\\g++.exe"
 		}
 	]
+=======
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build Bike Game",
+            "command": "C:/msys64/ucrt64/bin/g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I", "D:/OOP_PROJECT/dependencies/SFML/include",
+                "-L", "D:/OOP_PROJECT/dependencies/SFML/lib",
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Fixed SFML 3 Build Task"
+        }
+    ]
+>>>>>>> c812219 (Cleaned up binaries and fixed repository connection)
 }
