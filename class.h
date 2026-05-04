@@ -4,14 +4,14 @@ using namespace std;
 
 //this is just declaration of function, note that all of them are void, we will change it as we go
 
-class GameObject{ // base class
-    protected:  //idk yet
+class GameObject{ // abstract, base class
+    protected:  
     int position;  //prob vector of lib
     public:
     virtual void interact()=0;
 
     virtual void update()=0;
-    //draw
+    virtual void draw()=0;
     virtual ~GameObject();
 };
 
@@ -45,8 +45,8 @@ class bike : public GameObject{
         shape.setPosition(position);
     }*/
     void move();  //key=movement
-    void speedUp();  //speed+1
-    void speedDown();  //speed-1
+    void speedUp();  //speed+1  (dep on obs)
+    //void speedDown();  //speed-1
     void update() override;
     void interact() override;
     //draw
@@ -55,7 +55,7 @@ class bike : public GameObject{
 class player{
     public:
     string name;
-    //bike b;
+    bike b;
     //need to include bike, ahould we make a struct?
     player(string n){
         name =n;
@@ -69,7 +69,7 @@ class Game{
     public:
     //window
     player p;
-    vector<obstale>obs;
+    vector<obstale*>obs;
     /* Game() : window(sf::VideoMode(800, 600), "Bike Game"), player("Ali")
     {
         window.setFramerateLimit(60);
