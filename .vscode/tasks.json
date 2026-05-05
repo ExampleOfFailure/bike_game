@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-{
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "cppbuild",
-			"label": "C/C++: g++.exe build active file",
-			"command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
-			"args": [
-				"-fdiagnostics-color=always",
-				"-g",
-				"${file}",
-				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe",
-				"-std=c++20",
-				"-lsfml-graphics",
-				"-lsfml-window",
-				"-lsfml-system"
-			],
-			"options": {
-				"cwd": "${fileDirname}"
-			},
-			"problemMatcher": [
-				"$gcc"
-			],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"detail": "compiler: C:\\msys64\\ucrt64\\bin\\g++.exe"
-		}
-	]
-=======
-
 {
     "version": "2.0.0",
     "tasks": [
@@ -42,18 +8,19 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "-std=c++17",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-I", "D:/OOP_PROJECT/dependencies/SFML/include",
-                "-L", "D:/OOP_PROJECT/dependencies/SFML/lib",
+                "-std=c++20",
+                "-I${workspaceFolder}/header",
+                "-IC:/msys64/ucrt64/include",
+                "${workspaceFolder}/src/*.cpp",
                 "-lsfml-graphics",
                 "-lsfml-window",
-                "-lsfml-system"
+                "-lsfml-system",
+                "-o",
+                "${workspaceFolder}/bike_game.exe",
+                "-mwindows"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "C:/msys64/ucrt64/bin"
             },
             "problemMatcher": [
                 "$gcc"
@@ -62,8 +29,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Fixed SFML 3 Build Task"
+            "detail": "Final fix for SFML paths"
         }
     ]
->>>>>>> c812219 (Cleaned up binaries and fixed repository connection)
 }
