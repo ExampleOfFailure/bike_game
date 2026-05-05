@@ -1,9 +1,10 @@
-#ifndef OBSTACLE_H
-#define OBSTACLE_H
+#ifndef BIKE_H
+#define BIKE_H
 
-#include "GameObject.h" 
+#include "GameObject.h"
 using namespace std;
-class bike : public GameObject {
+class bike : public GameObject
+{
 private:
     float speed;
     sf::Vector2f position;
@@ -12,60 +13,27 @@ private:
     sf::Clock speedClock; // timer for speed increase
 
 public:
-    bike() {
-        /*position = {100.f, 100.f};
-        speed = 60.f;
-
-        shape.setSize(sf::Vector2f(20.f, 10.f));
-        shape.setFillColor(sf::Color::Green);
-        shape.setPosition(position);*/
+    bike()
+    {
     }
 
-    void update(float dt) override {
+    void update()
+    {}
 
-        /*
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-            position.y -= speed * dt;
+    float getTime(sf::Clock &clock) {}
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-            position.y += speed * dt;
+        void speedUp(){
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-            position.x -= speed * dt;
+        } // ON bqsis of tiME
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-            position.x += speed * dt;
+        void speedDown(){
 
-        // apply position to shape
-        shape.setPosition(position);
+        }
 
-        // ⏱️ SPEED INCREASE OVER TIME
-        if (speedClock.getElapsedTime().asSeconds() > 5.f)
-        {
-            speed += 20.f;        // increase speed
-            speedClock.restart(); // reset timer
-        }*/
-    }
- 
+        void draw(sf::RenderWindow & window){
 
-float getTime(sf::Clock &clock) {
-   // return clock.getElapsedTime().asSeconds();hqd to add sf::Clock &clock in ga,e to calculae time
-} 
+        } 
+        int score(){}
 
-
-    void speedUp() {
-        
-    }//ON bqsis of tiME
-
-    void speedDown() {
-        
-    }
-
-    void draw(sf::RenderWindow& window) override {
-       
-    }
-    int score(int time) {}
-
-
-};
+    };
 #endif
