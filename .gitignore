@@ -1,0 +1,22 @@
+# --- Compiled Files ---
+*.exe
+*.obj
+*.o
+*.pdb
+
+# --- SFML / Binaries ---
+*.dll
+*.lib
+
+# --- IDE Specific (Visual Studio) ---
+.vs/
+out/
+x64/
+Debug/
+Release/
+*.user
+*.sln.dotsettings.user
+
+# --- Assets ---
+# (Don't ignore images/sounds, but maybe ignore huge temp logs)
+*.log
